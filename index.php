@@ -7,6 +7,8 @@
     <title>Hoang Nguyen</title>
     <link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"      rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link   rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -22,9 +24,11 @@
                         <div class="d-flex flex-column align-items-center text-center">
                             <img src="./assets/profile.jpg" alt="Admin" class="rounded-circle profile-pic" width="150">
                             <div class="mt-3">
-                                <h4>Hoang Nguyen</h4>
-                                <p class="text-secondary mb-1">Full Stack Developer</p>
-                                <p class="text-muted font-size-sm">76 Hempstead RD, Spring Valley NY 10977</p>
+                              <h4>Hoang Nguyen</h4>
+                              <p class="text-secondary mb-1">Full Stack Developer</p>
+                              <p class="text-muted font-size-sm mb-1">76 Hempstead RD, Spring Valley NY 10977</p>
+                              <p class="text-secondary mb-1"><strong>Phone:</strong> (832)533-0018</p>
+                              <button class="btn-outline-primary">Resume</button>
                             </div>
                         </div>
                     </div>
@@ -32,26 +36,48 @@
                 <!-- Social Media -->
                 <div class="card mt-3 text-truncate">
                     <ul class="list-group list-group-flush social-media-list">
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
-                            <a class="text-secondary text-truncate" href="https://hoangnguyen-dev.site">https://hoangnguyen-dev.site</a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2 icon-inline"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</h6>
-                            <a class="text-secondary text-truncate" href="https://github.com/hoang5309">https://github.com/hoang5309</a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter mr-2 icon-inline text-info"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>Twitter</h6>
-                            <a class="text-secondary text-truncate" href="https://twitter.com/HoangNg79302471">https://twitter.com/HoangNg79302471</a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram mr-2 icon-inline text-danger"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>Instagram</h6>
-                            <a class="text-secondary text-truncate" href="https://www.instagram.com/hoang_hoang5309/">https://www.instagram.com/hoang_hoang5309/</a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook mr-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
-                            <a class="text-secondary text-truncate" href="https://www.facebook.com/hoang.nguyen.353">https://www.facebook.com/hoang.nguyen.353</a>
-                        </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <h6 class="mb-0">
+                          <i class="zmdi zmdi-email zmdi-hc-lg"></i>
+                          Email
+                        </h6>
+                        <a class="text-secondary text-truncate" href="#">hoangdev5309@gmail.com</a>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <h6 class="mb-0">
+                          <i class="zmdi zmdi-globe-alt zmdi-hc-lg"></i>
+                          Website
+                        </h6>
+                        <a class="text-secondary text-truncate" href="https://hoangnguyen-dev.site">https://hoangnguyen-dev.site</a>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <h6 class="mb-0">
+                          <i class="zmdi zmdi-github zmdi-hc-lg"></i>
+                          Github
+                        </h6>
+                        <a class="text-secondary text-truncate" href="https://github.com/hoang5309">https://github.com/hoang5309</a>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <h6 class="mb-0">
+                          <i class="zmdi zmdi-twitter zmdi-hc-lg" style="color: #0dcaf0;"></i>
+                          Twitter
+                        </h6>
+                        <a class="text-secondary text-truncate" href="https://twitter.com/HoangNg79302471">https://twitter.com/HoangNg79302471</a>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <h6 class="mb-0">
+                          <i class="zmdi zmdi-instagram zmdi-hc-lg" style="color: #dc3545;"></i>
+                          Instagram
+                        </h6>
+                        <a class="text-secondary text-truncate" href="https://www.instagram.com/hoang_hoang5309/">https://www.instagram.com/hoang_hoang5309/</a>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                        <h6 class="mb-0">
+                          <i class="zmdi zmdi-facebook zmdi-hc-lg" style="color: #0d6efd;"></i>
+                          Facebook
+                        </h6>
+                        <a class="text-secondary text-truncate" href="https://www.facebook.com/hoang.nguyen.353">https://www.facebook.com/hoang.nguyen.353</a>
+                      </li>
                     </ul>
                 </div>
             </div>
@@ -60,63 +86,77 @@
             <div class="col-xl-9">
               <div class="row gutters-sm">
                 <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
+                  <div class="card">
                     <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
-                      <small>Web Design</small>
-                      <div class="progress mb-3" style="height: 5px">
+                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Coding Languges</i></h6>
+                      <small>Javascript</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>PHP</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>MySQL</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>C#</small>
+                      <div class="progress mb-2" style="height: 5px">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <small>Website Markup</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                      <small>Python</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <small>One Page</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Mobile Template</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Backend API</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                      <small>HTML/CSS</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
+                  <div class="card">
                     <div class="card-body">
-                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
+                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Skills</i></h6>
+                      <small>Database Design</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Wordpress/Shopify</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Team Work</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Project Management</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Client Communication</small>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
                       <small>Web Design</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Website Markup</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>One Page</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Mobile Template</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Backend API</small>
-                      <div class="progress mb-3" style="height: 5px">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress mb-2" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-
-
+              <div class="row gutters-sm">
+                <div class="col-sm-12 mb-3">       
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Projects</i></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
