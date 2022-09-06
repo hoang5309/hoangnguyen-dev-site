@@ -156,6 +156,20 @@
                       <div class="card h-100">
                         <div class="card-body">
                           <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Projects</i></h6>
+                          <div class = "card-container">
+                            <div class = "card">
+                              <div class = "image">
+                                <img href="#"src ="./assets/email-pic-2.jpg">
+                              </div>
+                              <div class="content">
+                                <h3>Email Module</h3>
+                                <p>This project allows user to select an email template, edit it and send it to chosen contacts.</p>
+                                <form action="pages/email.php">
+                                  <button class="btn btn-primary">Demo</button>
+                                </form>
+                              </div>
+                            </div>    
+                          </div> 
                         </div>
                       </div>
                     </div>
