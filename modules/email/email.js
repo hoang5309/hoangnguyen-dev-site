@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var taggedEmp = [];
+    getEmailTemplate1(1);
     $(document).on("click", ".clickable", function(){
         if ($(this).attr("value") != "none") {
             var value = $(this).attr("value").split("-");
@@ -38,4 +39,24 @@ $(document).ready(function(){
     
         $(html).appendTo('#tableHN').fadeIn('3000');
     })
+
+    function getEmailTemplate1(parm){
+        $.ajax({
+            type: 'POST',
+            data: {
+                template: parm
+            },
+            url: 'getEmailTemplate.php',
+            success: function (data) {
+                $('#emailDivTemplate').append(data)
+
+                $('.email-edit').on("keyup", function(e) {
+                    var thisID = '#'+ $(this).attr('id') + 'txt'
+                    console.log($(thisID))
+                    console.log($('#templateTitletxt').text())
+                    $(thisID).text($(this).val())
+                })
+            },
+        })
+    }
 })
