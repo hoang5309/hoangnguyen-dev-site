@@ -3,7 +3,21 @@ body{
     margin-top:20px;
     color: #1a202c;
     text-align: left;
-    background-color: #e2e8f0;    
+}
+.background-0{
+    background-color: #eee;
+}
+.background-1{
+    background: url('assets/background-1.jpg');    
+    background-repeat: no-repeat;
+    background-size: 100% 150%;
+    background-attachment: fixed;
+}
+.background-3{
+    background: url('assets/background-3.png');    
+    background-repeat: no-repeat;
+    background-size: 100% 150%;
+    background-attachment: fixed;
 }
 .main-body {
     padding: 15px;
@@ -26,6 +40,47 @@ body{
     margin-right: 0.5rem;
 }
 
+.contact-list-card{
+    height: 270px;
+    overflow-y: auto;
+}
+
+.hn-divider-text, .hn-divider-text-sm {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+}
+
+.hn-divider-text-sm span {
+    background: #fff;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+.clickable{
+    cursor: pointer;
+}
+.email-table{
+    max-height: 140px;
+    overflow-y: auto;
+}
+.template-container {
+    overflow-y: auto;
+    max-height: 52.2rem !important;
+}
+.hn-badge-custom {
+    background-color: rgba(40, 199, 111, 0.12);
+    color: #28c76f !important;
+    margin-left: 4px;
+  }
+.hn-badge-custom i {
+    margin-right: 4px;
+    cursor: pointer;
+}
+.w-100{
+    width: 100%;
+}
 /* BORROW CSS */
 
 .card {
@@ -41,7 +96,7 @@ body{
     background-color: #fff;
     background-clip: border-box;
     border: 0 solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+    border-radius: .65rem;
 }
 
 .card-body {
