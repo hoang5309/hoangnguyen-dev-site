@@ -52,9 +52,11 @@ $(document).ready(function(){
 
                 $('.email-edit').on("keyup", function(e) {
                     var thisID = '#'+ $(this).attr('id') + 'txt'
-                    console.log($(thisID))
-                    console.log($('#templateTitletxt').text())
                     $(thisID).text($(this).val())
+                })
+                $('.a-email-edit').on("keyup", function(e) {
+                    var thisID = '#'+ $(this).attr('id') + 'LINK'
+                    $(thisID).attr("href", $(this).val())
                 })
             },
         })
