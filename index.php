@@ -13,7 +13,7 @@
               integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link   rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="index.css">
   </head>
   <body class="background-3">
     <div class="container">
@@ -161,19 +161,84 @@
                         <div class="card-body">
                           <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Projects</i></h6>
                           <div class = "card-container">
-                            <div class = "card">
-                              <div class = "image">
-                                <img href="#"src ="./assets/email-pic-2.jpg">
+                            <div class="row gutters-sm">
+                              <div class="col-sm-4 mb-3">
+                                <div class = "project-card">
+                                  <div class = "image">
+                                    <img href="#"src ="./assets/email-pic-3.png">
+                                  </div>
+                                  <div class="content">
+                                    <h3>Email</h3>
+                                    <p>This project allows user to select an email template, edit it and send it to chosen contacts.</p>
+                                    <form action="modules/email/email.php">
+                                      <button class="btn btn-primary">Demo</button>
+                                    </form>
+                                  </div>
+                                </div>  
                               </div>
-                              <div class="content">
-                                <h3>Email Module</h3>
-                                <p>This project allows user to select an email template, edit it and send it to chosen contacts.</p>
-                                <form action="modules/email/email.php">
-                                  <button class="btn btn-primary">Demo</button>
-                                </form>
+                              <div class="col-sm-4 mb-3">
+                                  <div class = "project-card">
+                                    <div class = "image">
+                                      <img href="#"src ="./assets/epayment.png">
+                                    </div>
+                                    <div class="content">
+                                      <h3>Epayment</h3>
+                                      <p>Using Stripe API to process payment and store payment history.</p>
+                                      <form action="modules/epayment/epayment.php">
+                                        <button class="btn btn-primary">Demo</button>
+                                      </form>
+                                    </div>
+                                  </div>    
                               </div>
-                            </div>    
+                            </div>
                           </div> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row gutters-sm">
+                    <div class="col-sm-12 mb-3">       
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Websites That I Worked On</i></h6>
+                          <ul class="grid">
+                            <li>
+                              <a href="https://plastic-craft.com/">
+                                <img src="./assets/plasticcraft.png" alt="">
+                                <span class="description">Plastic-Craft</span>
+                              </a>
+                             </li>
+                            <li>
+                              <a href="https://www.plasticcuttingboards.com/">
+                                <img src="./assets/plasticcuttingboard.png" alt="">
+                                <span class="description">Plastic-Craft Cutting Board</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://donorjet.com/">
+                                <img src="./assets/donorjet.png" alt="">
+                                <span class="description">DonorJet</span>
+                              </a>      
+                            </li>
+                            <li>
+                              <a href="https://www.iphorestaurant.com/">
+                                <img src="./assets/iphorestaurant.png" alt="">
+                                <span class="description">IPho Restaurant</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://musacchiabroadhead.com/">
+                                <img src="./assets/broadhead.png" alt="">
+                                <span class="description">Musacchia Broadhead</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://topnailny.com/">
+                                <img src="./assets/topnail.png" alt="">
+                                <span class="description">Top Nail NY</span>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -184,5 +249,9 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" 
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>

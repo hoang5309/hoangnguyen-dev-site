@@ -3,8 +3,7 @@
     $html;
     switch($template){
         case 1:
-            $html = readfile('templates/template1.html');
-            break;
-    }
-    return $html;
+            $form = readfile('templates/form1.html');
+            $email = readfile('templates/template1.html');
+    }  
 ?>

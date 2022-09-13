@@ -39,6 +39,20 @@ $(document).ready(function(){
     
         $(html).appendTo('#tableHN').fadeIn('3000');
     })
+    $(document).on("click", "#sendEmailBtn", function(){
+        $("#cardLoading").animate({height:80},200);
+        $("#cardLoading").show()
+        $.ajax({
+            type: 'POST',
+            data: {
+                emailList: JSON.stringify(taggedEmp)
+            },
+            url: 'sendEmail.php',
+            success: function (data) {
+                var jsondata = JSON.parse(data);
+            },
+        })
+    })
 
     function getEmailTemplate1(parm){
         $.ajax({

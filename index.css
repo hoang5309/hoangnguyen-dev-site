@@ -138,14 +138,14 @@ body{
     padding : 30px;  
 }
   
-.card-container .card {
+.card-container .project-card {
     position: relative;
     max-width : 256px;
     height : 190px;  
     background-color : #fff;
-    margin : 30px 10px;
-    padding : 20px 15px;
-    
+    margin : 30px 0px;
+    padding : 20px 0px;
+    align-items: center;
     display : flex;
     flex-direction : column;
     box-shadow : 0 5px 20px rgba(0,0,0,0.5);
@@ -153,27 +153,26 @@ body{
     border-radius : 15px;
 
 }
-.card-container .card:hover {
+.card-container .project-card:hover {
     height : 320px;    
 }
   
   
-.card-container .card .image {
+.project-card .image {
     position : relative;
-    width : 210px;
-    height : 210px; 
     top : -40%;
-    left: 8px;
+    width : 200px;
+    height : 200px; 
     box-shadow : 0 5px 20px rgba(0,0,0,0.2);
     z-index : 1;
 }
   
-.card-container .card .image img {
+.project-card  .image img {
     max-width : 100%;
     border-radius : 15px;
 }
   
-.card-container .card .content {
+.card-container .project-card .content {
     position : relative;
     top : -140px;
     padding : 10px 15px;
@@ -186,7 +185,7 @@ body{
       
 }
   
-.card-container .card:hover .content {
+.card-container .project-card:hover .content {
      margin-top : 30px;
      visibility : visible;
      opacity : 1;
@@ -205,3 +204,185 @@ body{
 .special-card1 p {
     color: hsl(229, 6%, 66%)
 }
+
+.card-loading{
+    height: 0px;
+    text-align: center;
+    display: none;
+}
+
+.loader>span{
+	font-size: 36px;
+	font-family: "franklin gothic medium",sans-serif;
+	display: inline-block;
+	animation:flip 2.6s infinite linear;
+	transform-origin:0 70%;
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+}
+
+@keyframes flip{
+	35%{
+		transform: rotateX(360deg);
+	}
+	100%{
+		transform: rotatex(360deg);
+	}
+}
+
+.loader>span:nth-child(2){
+	animation-delay: 0.3s;
+}
+
+.loader>span:nth-child(3){
+	animation-delay: 0.6s;
+}
+
+.loader>span:nth-child(4){
+	animation-delay: 0.9s;
+}
+
+.loader>span:nth-child(5){
+	animation-delay: 1.2s;
+}
+
+.loader>span:nth-child(6){
+	animation-delay: 1.5s
+}
+
+.loader>span:nth-child(7){
+	animation-delay: 1.8s
+}
+
+/* Animation */
+:root {
+    --offset: 1rem;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+img, a {
+    display: block;
+    height: 100%;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+.grid {
+    display: grid;
+    grid-gap: 0;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.grid li {
+    position: relative;
+}
+.grid li:hover ~ li:last-child:after, .grid li:last-child:hover:after, .grid li:hover ~ li:last-child:before, .grid li:last-child:hover:before {
+    opacity: 1;
+    transition: 1s ease;
+}
+.grid li:last-child:after, .grid li:last-child:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    pointer-events: none;
+    clip-path: polygon(var(--offset) var(--offset), var(--offset) calc(100% - var(--offset)), calc(100% - var(--offset)) calc(100% - var(--offset)), calc(100% - var(--offset)) var(--offset));
+    -webkit-clip-path: polygon(var(--offset) var(--offset), var(--offset) calc(100% - var(--offset)), calc(100% - var(--offset)) calc(100% - var(--offset)), calc(100% - var(--offset)) var(--offset));
+    opacity: 0;
+    transition: opacity 1s, transform 1s 1s, background 1s;
+}
+.grid li:last-child:after {
+    mix-blend-mode: multiply;
+    background: #aaafc3;
+}
+.grid li:last-child:before {
+    backdrop-filter: grayscale(100%) blur(2px);
+    -webkit-backdrop-filter: grayscale(100%) blur(2px);
+}
+.grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 33.3333333333%);
+}
+.grid li:last-child:after, .grid li:last-child:before {
+    left: 0%;
+    transform: translate3d(-50%, -100%, 0);
+}
+.grid li:nth-child(1):hover ~ li:last-child:after, .grid li:nth-child(1):hover ~ li:last-child:before {
+    transform: translate3d(-100%, -200%, 0);
+}
+.grid li:nth-child(2):hover ~ li:last-child:after, .grid li:nth-child(2):hover ~ li:last-child:before {
+    transform: translate3d(0%, -200%, 0);
+}
+.grid li:nth-child(3):hover ~ li:last-child:after, .grid li:nth-child(3):hover ~ li:last-child:before {
+    transform: translate3d(-100%, -100%, 0);
+}
+.grid li:nth-child(4):hover ~ li:last-child:after, .grid li:nth-child(4):hover ~ li:last-child:before {
+    transform: translate3d(0%, -100%, 0);
+}
+.grid li:nth-child(5):hover ~ li:last-child:after, .grid li:nth-child(5):hover ~ li:last-child:before {
+    transform: translate3d(-100%, 0, 0);
+}
+.grid li:last-child:hover:after, .grid li:last-child:hover:before {
+    transform: translate3d(0%, 0%, 0);
+}
+@media (max-width: 60em) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 33.3333333333%);
+   }
+    .grid li:last-child:after, .grid li:last-child:before {
+        left: 0%;
+        transform: translate3d(-50%, -100%, 0);
+   }
+    .grid li:nth-child(1):hover ~ li:last-child:after, .grid li:nth-child(1):hover ~ li:last-child:before {
+        transform: translate3d(-100%, -200%, 0);
+   }
+    .grid li:nth-child(2):hover ~ li:last-child:after, .grid li:nth-child(2):hover ~ li:last-child:before {
+        transform: translate3d(0%, -200%, 0);
+   }
+    .grid li:nth-child(3):hover ~ li:last-child:after, .grid li:nth-child(3):hover ~ li:last-child:before {
+        transform: translate3d(100%, -100%, 0);
+   }
+    .grid li:nth-child(4):hover ~ li:last-child:after, .grid li:nth-child(4):hover ~ li:last-child:before {
+        transform: translate3d(0%, -100%, 0);
+   }
+    .grid li:nth-child(5):hover ~ li:last-child:after, .grid li:nth-child(5):hover ~ li:last-child:before {
+        transform: translate3d(100%, 0%, 0);
+   }
+    .grid li:last-child:hover:after, .grid li:last-child:hover:before {
+        transform: translate3d(0%, 0%, 0);
+   }
+    :root {
+        --offset: 0;
+   }
+}
+.description {
+    font-family: "Unica One", sans-serif;
+    font-size: 1.25rem;
+    position: absolute;
+    display: block;
+    right: 2rem;
+    left: 2rem;
+    text-align: center;
+    top: 50%;
+    width: 180px;
+    margin: auto;
+    color: white;
+    z-index: 100;
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+    transition: 0.3s 0s;
+}
+li:hover .description {
+    opacity: 1;
+    transition: 0.6s 0.3s;
+}
+
+

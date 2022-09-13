@@ -1,0 +1,155 @@
+/* ANIMATION */
+:root {
+    --offset: 1rem;
+  }
+  
+  $offset: var(--offset);
+  
+  // $cols - number of column
+  // n - number of items
+  
+  @mixin moveInGrid($cols, $n) {
+    $rows: ceil($n / $cols);
+    .grid {       
+      grid-template-columns: repeat($cols, 1fr);
+      grid-template-rows: repeat($rows, 100% / $rows);
+      li:last-child:after,
+      li:last-child:before {
+        left: 100% * (($cols - $n) % $cols);
+        transform: translate3d(-100% * (($cols - 1) / 2), -100% * (($rows - 1) / 2), 0);
+      }
+      @for $i from 1 through $n - 1 {
+        $x: ($cols - $i) % $cols;
+        $y: $rows - floor(($i - 1) / $cols) - 1;
+          li:nth-child(#{$i}):hover ~ li:last-child:after,
+        li:nth-child(#{$i}):hover ~ li:last-child:before {
+            transform: translate3d(-$x*100%, -$y*100%, 0);   
+          }
+      }
+      li:last-child:hover:after,
+      li:last-child:hover:before {
+        transform: translate3d(-100% * (($cols - $n) % $cols), 0%, 0);  
+      }
+    }
+    
+  }
+  
+  @mixin colors( $n, $colors ) {
+    @for $i from 1 through $n - 1 {
+      li:nth-child(#{$i}):hover ~ li:last-child:after {
+        @if (nth($colors, $i)) {
+          background: nth($colors, $i);
+        }       
+      }
+    }
+    li:last-child:hover:after {
+      background: nth($colors, -1);   
+    }
+  }
+  
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  img,
+  a {
+      display: block;
+    height: 100%;
+  }
+  img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-attachment: fixed;
+  }
+  .grid {
+    display: grid;
+    grid-gap: 0;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    li {
+      position: relative;
+    }
+    li:hover ~ li:last-child:after,
+    li:last-child:hover:after,
+    li:hover ~ li:last-child:before,
+    li:last-child:hover:before {
+      opacity: 1;
+      transition: 1s ease;
+    }
+    li:last-child:after,
+    li:last-child:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      pointer-events: none;
+      clip-path:polygon($offset $offset, $offset calc(100% - #{$offset}), calc(100% - #{$offset}) calc(100% - #{$offset}), calc(100% - #{$offset}) $offset);
+      -webkit-clip-path:polygon($offset $offset, $offset calc(100% - #{$offset}), calc(100% - #{$offset}) calc(100% - #{$offset}), calc(100% - #{$offset}) $offset);
+      opacity: 0;
+      transition: opacity 1s, transform 1s 1s, background 1s;
+    }
+   
+    li:last-child:after {
+      mix-blend-mode: multiply;
+      background: #aaafc3;
+    }
+    li:last-child:before {
+      backdrop-filter: grayscale(100%) blur(2px);
+      -webkit-backdrop-filter: grayscale(100%) blur(2px);
+    }
+    //colors (optional)
+    //@include colors(8, [#222333, #b5a1b7, #aaafc3, #daa384, #A5D6A7, #6c4331, #555, #a88504]);
+  }
+  
+  
+  
+  @include moveInGrid(2, 6);
+  
+  @media (max-width: 60em) {
+    @include moveInGrid(2, 6);
+    :root {
+      --offset: 0;
+    }
+  }
+  
+  .description {
+    font-family: "Unica One", sans-serif;
+    font-size: 1.25rem;
+    position: absolute;
+    display: block;
+    right: 2rem;
+    left: 2rem;
+    text-align: center;
+    top: 50%;
+    width: 60px;
+    margin: auto;
+    color: white;
+    z-index: 100;
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+    transition: .3s 0s;
+  }
+  
+  li:hover .description {
+    opacity: 1; 
+    transition: .6s .3s;
+  }
+  
+  header  {
+    padding: 1rem;
+    font-family: "Courier New", monospace, serif;
+    font-size: 1em;
+  }
+  
+  h1 {
+    margin-top: 0;
+  }
+  
+  p {
+    line-height: 1.4;
+}

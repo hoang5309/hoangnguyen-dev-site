@@ -113,9 +113,24 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-xxl-12 mb-3">
+                                <div class="card card-loading" id="cardLoading">
+                                    <div class="card-body">
+                                        <div class="loader">
+                                            <span style="color: #4285F4">S</span>
+                                            <span style="color: #EA4335">E</span>
+                                            <span style="color: #FBBC05">N</span>
+                                            <span style="color: #4285F4">D</span>
+                                            <span style="color: #34A853">I</span>
+                                            <span style="color: #4285F4">N</span>
+                                            <span style="color: #EA4335">G</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- SEND MAIL BUTTON -->
                             <div class="col-xxl-12 mb-3">
-                                <button class="btn btn-rounded btn-space btn-primary w-100" id="createNewContact">Send Email</button>
+                                <button class="btn btn-rounded btn-space btn-primary w-100" id="sendEmailBtn">Send Email</button>
                             </div>
                         </div>
                     </div>
@@ -127,7 +142,7 @@
                                     <i class="material-icons text-info mr-2">Email</i>
                                 </h6>
                                 <div class="row mb-3" id="emailDivTemplate">
-
+ 
                                 </div>
                             </div>
                         </div>
@@ -140,6 +155,10 @@
             integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
             crossorigin="anonymous">
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" 
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="email.js"></script>
     </body>
 </html>
