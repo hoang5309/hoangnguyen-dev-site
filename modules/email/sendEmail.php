@@ -2,11 +2,14 @@
     require '..\..\assets\vendor\autoload.php';
     $emailList = json_decode($_POST['emailList']);
     $success = 0;
+    $fail = 0;
+    $subject = $_POST["subject"];
+    $return = array();
     for($i = 0; $i < Count($emailList); $i++){
         $emailListSplit = explode("-", $emailList[$i]);
         $email = new \SendGrid\Mail\Mail(); 
         $email->setFrom("hoangdev5309@gmail.com", "Hoang Nguyen");
-        $email->setSubject("test");
+        $email->setSubject($subject );
         $email->addTo($emailListSplit[0], "Example User");
         //$email->addContent("text/plain", $contentHN);
         $emailTemplate = file_get_contents('templates/template1.html');
@@ -29,14 +32,23 @@
             $response = $sendgrid->send($email);
             if ($response->statusCode() == 202) {
                 $success++;
-                echo $success;
+                $return = array(
+                    'status'=>1,
+                    'data'=>$success
+                );
             }else{
                 $fail++;
+                $return = array(
+                    'status'=>0,
+                    'data'=>$fail
+                );
             }
         } catch (Exception $e) {
-            $fail++;
-            echo 'Caught exception: ' . $e->getMessage() . "\n";
+            $return = array(
+                'status'=>3,
+                'data'=>'Caught exception: ' . $e->getMessage() . "\n"
+            );
         }
     }
-   
+    echo json_encode($return);
 ?>
