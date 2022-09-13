@@ -24,7 +24,7 @@
         );
         */
         //SENDGRID_API_KEY
-        $sendgrid = new \SendGrid('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');
+        $sendgrid = new \SendGrid('INSERT API KEY');
         try {
             $response = $sendgrid->send($email);
             if ($response->statusCode() == 202) {
